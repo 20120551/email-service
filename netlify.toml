@@ -1,6 +1,5 @@
 [functions]
   node_bundler="esbuild"
-  included_files=["dist/data/**"]
 
 [build]
   command = "npm run build"
