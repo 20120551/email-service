@@ -5,7 +5,7 @@
   command = "npm run build"
   publish = "dist"
   # base ="/"
-  functions="src/functions/email-puller"
+  functions="src/functions/*"
 
 [[redirects]]
   from="/*"
