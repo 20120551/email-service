@@ -1,0 +1,40 @@
+{
+  "name": "emailservice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node dist/index.js",
+    "build": "tsc -b --verbose",
+    "start:worker": "node dist/subscriber/index.js"
+  },
+  "_moduleAliases": {
+    "@config": "./dist/config",
+    "@functions": "./dist/functions",
+    "@graphql": "./dist/graphql",
+    "@lib": "./dist/lib",
+    "@middleware": "./dist/middleware",
+    "@plugins": "./dist/plugins",
+    "@services": "./dist/services",
+    "@subscribers": "./dist/subscribers",
+    "@events": "./dist/events"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@netlify/functions": "^2.3.0",
+    "axios": "^1.5.1",
+    "fastify": "^4.24.3",
+    "fastify-plugin": "^4.5.1",
+    "form-data": "^4.0.0",
+    "googleapis": "^128.0.0",
+    "jsonwebtoken": "^9.0.2",
+    "mailgun.js": "^9.3.0",
+    "module-alias": "^2.2.3",
+    "redis": "^4.6.10"
+  },
+  "devDependencies": {
+    "@types/jsonwebtoken": "^9.0.4"
+  }
+}
