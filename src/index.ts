@@ -1,7 +1,7 @@
 import "module-alias/register";
+import 'dotenv/config';
 import fastify from "./bootstrap";
 import axios from "axios";
-
 
 fastify.get("/", async (req, reply) => {
     const url = `https://gmail.googleapis.com/gmail/v1/users/me/profile`;
