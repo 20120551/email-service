@@ -1,5 +1,5 @@
 export default class ParseXmlEvent implements IEvent {
-    name: string = ParseXmlEvent.name;
+    name: string = "ParseXmlEvent";
 
     constructor(
         public id: string,

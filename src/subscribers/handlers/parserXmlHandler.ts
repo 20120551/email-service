@@ -3,7 +3,7 @@ import { parseXmlInvoiceDetail, storeBunchOfXmlData } from "@services/parserServ
 
 
 export default class ParserXmlEventHandler implements IEventHandler<ParseXmlEvent> {
-    event: string = ParseXmlEvent.name;
+    event: string = "ParseXmlEvent";
     async handle(event: ParseXmlEvent): Promise<void> {
         console.log(`handling ${event.name}`);
         const { email_id, url } = event;
