@@ -10,7 +10,7 @@ export const createGoogleMail = (opts: GoogleEmailOptions) => {
 }
 const googleMailPlugin: FastifyPluginCallback<GoogleEmailOptions> = fp((fastify, opts: GoogleEmailOptions, done) => {
     const oAuth2Client = createGoogleMail(opts);
-    console.log(oAuth2Client);
+    // console.log(oAuth2Client);
     fastify.decorate("oAuthClient", oAuth2Client);
     done();
 })

@@ -1,0 +1,1 @@
+export const XML_PARSER_CHANNEL = "XML_PARSER_CHANNEL";

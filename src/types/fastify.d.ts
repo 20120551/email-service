@@ -1,11 +1,15 @@
 import { Interfaces } from "mailgun.js";
-import { RedisPubsub } from "redis";
 import { createGoogleMail } from "@lib/mail/googleMailPlugin";
+import { Firebase } from "@lib/firebase/firebasePlugin";
 
 declare module 'fastify' {
     interface FastifyInstance {
-        pubsub: RedisPubsub
+        redis: {
+            cache: RedisCache,
+            pubsub: RedisPubsub
+        }
         mg: Interfaces.IMailgunClient,
-        oAuthClient: ReturnType<typeof createGoogleMail>
+        oAuthClient: ReturnType<typeof createGoogleMail>,
+        firebase: Firebase
     }
 }
