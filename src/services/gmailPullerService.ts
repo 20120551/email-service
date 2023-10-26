@@ -48,7 +48,7 @@ export const getBunchOfMessagesDetail = async (token: string, messages: any[]) =
 
     // cache first element into redis
     if (ids.length !== 0) {
-        await fastify.redis.cache.set<string>("messageId", ids[0], 10 * 60);
+        await fastify.redis.cache.set<string>("messageId", ids[0], 60 * 60);
     }
 
     const batchMessages: any[] = await Promise.all(ids.map((id) => {
